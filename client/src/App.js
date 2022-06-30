@@ -5,7 +5,6 @@ import {Route, Routes, Link} from 'react-router-dom'
 // import Axios from "axios";
 
 //Importando outras páginas
-// import Nav from './Nav';
 import Home from './paginas/Home';
 import Login from './paginas/Login';
 import CadastroUsuario from './paginas/CadastroUsuario';
