@@ -12,6 +12,20 @@ mongoose.connect('mongodb://rootuser:rootpass@localhost:27017/ppw?authSource=adm
 
 // Setor Usuários
 
+app.post("/validarUser", async (req, res) => {
+    const user = req.body.user
+    const senha = req.body.senha
+    const userDb = await userModel.findOne({ user: user })
+    if (!userDb){
+        res.status(404).json({ message: "Usuario nao encontrado "})
+    }
+    if (userDb.senha != senha){
+        res.status(400).json({ message: "Senha incorreta" })  
+    }
+    res.status(200).send()
+})
+
+
 app.get("/getUsers", (req, res) => {
     userModel.find({},(err, result) => {
         if (err) {
