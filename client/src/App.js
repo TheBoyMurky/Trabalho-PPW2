@@ -6,11 +6,11 @@ import {Route, Routes, Link} from 'react-router-dom'
 
 //Importando outras páginas
 // import Nav from './Nav';
-import Home from './cu/Home';
-import Login from './cu/Login';
-import CadastroUsuario from './cu/CadastroUsuario';
-import CadastroFunko from './cu/CadastroFunko';
-import ProcurarFunko from './cu/ProcurarFunko';
+import Home from './paginas/Home';
+import Login from './paginas/Login';
+import CadastroUsuario from './paginas/CadastroUsuario';
+import CadastroFunko from './paginas/CadastroFunko';
+import ProcurarFunko from './paginas/ProcurarFunko';
 
 function App() {
   
