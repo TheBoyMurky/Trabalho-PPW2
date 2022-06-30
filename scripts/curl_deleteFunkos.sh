@@ -1,0 +1,1 @@
+curl -X DELETE -H "Content-Type: application/json" -d '{"name":"Angela Moss"}' http://localhost:3001/deleteFunko;
