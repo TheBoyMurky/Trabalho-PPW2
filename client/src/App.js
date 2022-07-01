@@ -1,14 +1,12 @@
 import './App.css';
 import React from "react"
 import {Route, Routes, Link} from 'react-router-dom'
-// import {useState, useEffect} from "react";
-// import Axios from "axios";
 
 //Importando outras páginas
 import Home from './paginas/Home';
 import Login from './paginas/Login';
-import CadastroUsuario from './paginas/CadastroUsuario';
-import CadastroFunko from './paginas/CadastroFunko';
+import PaginaUsuario from './paginas/PaginaUsuario';
+import PaginaFunko from './paginas/PaginaFunko';
 import ProcurarFunko from './paginas/ProcurarFunko';
 import PaginaCadastro from './paginas/PaginaCadastro';
 
@@ -22,13 +20,13 @@ function App() {
             <Link to="/login"><li>Login</li></Link>
             <Link to="/procurar"><li>Procurar por Funko</li></Link>
         </ul>
-    </nav>
+      </nav>
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route exact path="login" element={<Login />} />
         <Route exact path="procurar" element={<ProcurarFunko />} />
-        <Route exact path="cadastrousuario" element={<CadastroUsuario />} />
-        <Route exact path="cadastrofunko" element={<CadastroFunko />} />
+        <Route exact path="paginausuario" element={<PaginaUsuario />} />
+        <Route exact path="paginafunko" element={<PaginaFunko />} />
         <Route exact path="paginacadastro" element={<PaginaCadastro />} />
       </Routes>
     </div>

@@ -15,7 +15,7 @@ mongoose.connect('mongodb://rootuser:rootpass@localhost:27017/ppw?authSource=adm
 app.post("/validarUser", async (req, res) => {
     const user = req.body.user
     const senha = req.body.senha
-    const userDb = await userModel.findOne({ user: user })
+    const userDb = await userModel.findOne({ username: user })
     if (!userDb){
         res.status(404).json({ message: "Usuario nao encontrado "})
     }
@@ -51,11 +51,11 @@ app.put("/updateUserPassword", async (req, res) => {
     res.json(userToUpdate)
 });
 
-app.delete("/deleteUser", async (req, res) => {
+app.post("/deleteUser", async (req, res) => {
     const userToDelete = req.body;
-    await funkoModel.deleteOne({name:userToDelete.name})
+    await userModel.deleteOne({username:userToDelete.username})
 
-    res.json(funkoToDelete)
+    res.status(200).json({ message: "Usuario deletado" })
 })
 
 

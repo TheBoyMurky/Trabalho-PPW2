@@ -1,7 +1,7 @@
 import '../App.css';
 import React from "react"
 
-function CadastroFunko() {
+function PaginaFunko() {
   return (
     <div>
       <h1>CADASTRO FUNKO</h1>
@@ -9,4 +9,4 @@ function CadastroFunko() {
   );
 }
 
-export default CadastroFunko;
+export default PaginaFunko;

@@ -13,7 +13,7 @@ function Login() {
   async function validarUser(event) {
     event.preventDefault();
     const userVerify = {
-      user: user,
+      username: user,
       senha: senha
     }
 
@@ -21,12 +21,11 @@ function Login() {
     let requisicao = Axios.post(url + "validarUser", userVerify)
     requisicao.then((resposta) => {
       if(resposta.status === 200){
-        // if (user === "admin") {
-        //   navigate("/paginacadastro")
-        // } else {
-        //   navigate("/cadastrofunko")
-        // }
-        navigate("/paginacadastro")
+        if (user === "admin") {
+          navigate("/paginacadastro")
+        } else {
+          navigate("/paginafunko")
+        }
       }   
     })
   }
