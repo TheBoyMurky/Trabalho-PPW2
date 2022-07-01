@@ -87,21 +87,21 @@ function PaginaUsuario() {
     <div>
       <h1>Criar Usuario</h1>
       <form onSubmit={criarUser}>
-        <input type='text' id="userCriar" onChange={handleUserCriar} value={userCriar} /><br/>
-        <input type='password' id="senhaCriar" onChange={handlePasswordCriar} value={senhaCriar} /><br/>
+        <label>Username: <input type='text' id="userCriar" onChange={handleUserCriar} value={userCriar} /></label><br/>
+        <label>Senha: <input type='password' id="senhaCriar" onChange={handlePasswordCriar} value={senhaCriar} /></label><br/>
         <input type="submit" value="Entrar" name="" id="" />
       </form>
       <hr/>
       <h1>Alterar Senha</h1>
       <form onSubmit={alterarUser}>
-        <input type='text' id="userAlterar" onChange={handleUserAlterar} value={userAlterar} /><br/>
-        <input type='password' id="senhaAlterar" onChange={handlePasswordAlterar} value={senhaAlterar} /><br/>
+      <label>Username: <input type='text' id="userAlterar" onChange={handleUserAlterar} value={userAlterar} /></label><br/>
+        <label>Senha: <input type='password' id="senhaAlterar" onChange={handlePasswordAlterar} value={senhaAlterar} /></label><br/>
         <input type="submit" value="Entrar" name="" id="" />
       </form>
       <hr/>
       <h1>Deletar User</h1>
       <form onSubmit={deletarUser}>
-        <input type='text' id="userDeletar" onChange={handleUserDeletar} value={userDeletar} /><br/>
+      <label>Username: <input type='text' id="userDeletar" onChange={handleUserDeletar} value={userDeletar} /></label><br/>
         <input type="submit" value="Entrar" name="" id="" />
       </form>
       <hr/>

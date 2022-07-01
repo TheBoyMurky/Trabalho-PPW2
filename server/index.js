@@ -13,9 +13,9 @@ mongoose.connect('mongodb://rootuser:rootpass@localhost:27017/ppw?authSource=adm
 // Setor Usuários
 
 app.post("/validarUser", async (req, res) => {
-    const user = req.body.user
+    const username = req.body.username
     const senha = req.body.senha
-    const userDb = await userModel.findOne({ username: user })
+    const userDb = await userModel.findOne({ username: username })
     if (!userDb){
         res.status(404).json({ message: "Usuario nao encontrado "})
     }
@@ -78,21 +78,14 @@ app.post("/createFunko", async (req, res) => {
     res.json(funko)
 });
 
-app.put("/updateFunkoValor", async (req, res) => {
+app.put("/updateFunko", async (req, res) => {
     const funkoToUpdate = req.body;
-    await funkoModel.findOneAndUpdate({name:funkoToUpdate.name}, {valor:funkoToUpdate.valor})
+    await funkoModel.findOneAndUpdate({name:funkoToUpdate.name}, funkoToUpdate)
     
     res.json(funkoToUpdate)
 });
 
-app.put("/updateFunkoSale", async (req, res) => {
-    const funkoToUpdate = req.body;
-    await funkoModel.findOneAndUpdate({name:funkoToUpdate.name}, {sale:funkoToUpdate.sale})
-
-    res.json(funkoToUpdate)
-});
-
-app.delete("/deleteFunko", async (req, res) => {
+app.post("/deleteFunko", async (req, res) => {
     const funkoToDelete = req.body;
     await funkoModel.deleteOne({name:funkoToDelete.name})
 

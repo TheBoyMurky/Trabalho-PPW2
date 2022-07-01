@@ -32,12 +32,12 @@ function Login() {
 
   const handleUser = event => {
     setUser(event.target.value)
-    console.log(user)
+    // console.log(user)
   }
 
   const handlePassword = event => {
     setSenha(event.target.value)
-    console.log(senha)
+    // console.log(senha)
   }
 
   return (

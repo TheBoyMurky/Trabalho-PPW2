@@ -1,10 +1,11 @@
+
 import '../App.css';
 import React from "react"
 
 function ProcurarFunko() {
   return (
     <div>
-      <h1>CAÇAR ESSES FUNKO POOPI</h1>
+      <h1>TODO</h1>
     </div>
   );
 }
